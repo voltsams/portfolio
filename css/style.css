@@ -229,7 +229,7 @@ section{
 }
 
 
-/* SKILLS */
+/* SKILLS START */
 .about .skills{
     margin: 3rem 0;
 }
@@ -276,8 +276,9 @@ section{
 .about .skills .progress .bar:nth-child(6) h3{
     width: 85%;
 }
+/* SKILLS END */
 
-/* Formations & Expériences START */
+/* FORMATIONS & EXPERIENCES START */
 .about .edu-exp .row{
     display: flex;
     flex-wrap: wrap;
@@ -337,9 +338,9 @@ section{
     background-color: var(--black);
     color: var(--white);
 }
+/* FORMATIONS & EXPERIENCES END */
 
-/* Formations & Expériences END */
-/* Services START */
+/* SERVICES START */
 .services .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -362,15 +363,44 @@ section{
     margin: 1rem 0;
     background-color: var(--yellow);
     padding: 1rem;
+    font-weight: 1rem;
 }
 .services .box-container .box p{
     font-size: 1.5rem;
     text-transform: none;
     line-height: 2.2rem;
 }
-/* Services END */
+/* SERVICES END */
 
+/* PORTFOLIO START */
+.portfolio .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+}
+.portfolio .box-container .box img{
+    width: 100%;
+    object-fit: contain;
+    
+}
+/* super fier de cette config */
+.portfolio .box-container .box:hover:nth-child(2n+1){
+    border:solid 0.7rem var(--black);
+}
+.portfolio .box-container .box:hover:nth-child(2){
+    border:solid 0.7rem var(--yellow);
+}
+.portfolio .box-container h3{
+    font-size: 2rem;
+    margin: 1rem 0;
+}
 
+.portfolio .box-container span{
+    font-size: 1.8rem;
+    font-style: italic
+}
+
+/* PORTFOLIO END */
 
 /*   Media Queries // Responsivité  */
 @media(max-width: 991px){
@@ -416,5 +446,12 @@ section{
         display: block;
     }
     
+    /* PORTFOLIO SECTION START */
+    .portfolio .box-container{
+        display: block;
+    }
+    .portfolio .box-container .box{
+        margin: 1rem 0 2rem;
+    }
 }
 
