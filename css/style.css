@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+:root{
+   --yellow:#ffcc0d;
+   --black:#000;
+   --white:#fff;
+   --light-bg:#eee;
+   --border-bold:.5rem solid var(--black);
+   --border-light:.2rem solid var(--black);
+}
+
+*{
+   font-family: 'Rubik', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   text-transform: capitalize;
+   color:var(--black);
+   
+}
+
+*::selection{
+   background-color: var(--black);
+   color:var(--yellow);
+}
+
+*::-webkit-scrollbar{
+   height: .5rem;
+   width: 1rem;
+}
+
+*::-webkit-scrollbar-track{
+   background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+   background-color: var(--yellow);
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow: hidden; /* possible inutile*/
+    transition: .2s linear !important;
+}
+body.active{
+    padding-left: 35rem;
+}
+
+section{
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.heading{
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.heading span{
+    text-transform: uppercase;
+    font-size: 6.5rem;
+    border-bottom: var(--border-bold);
+}
+
+.btn{
+    display: inline-block;
+    motion-path: 1rem;
+    cursor: pointer;
+    padding: 1rem 3rem;
+    border: var(--border-light);
+    color: var(--black);
+    font-size: 2rem;
+}
+
+.btn:hover{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.header{
+    position :fixed;
+    top: 0; left: -35rem;
+    height: 100vh;
+    background-color: var(--white);
+    border-right: var(--border-bold);
+    width: 35rem;
+    padding:3rem 2rem;
+    padding-bottom: 9rem;
+    display: flex;
+    text-align: center;
+    justify-content:space-between;
+    flex-flow: column;
+    transition: .2s linear !important;
+    text-align: center;
+}
+.header.active{
+    left: 0rem;
+}
+
+/* ---------- Start Section Home ------------- */
+.home{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    min-height: 100vh;
+}
+
+.home .image img{
+    height: 65rem;
+    padding: 2rem;
+    border:var(--border-bold);
+    width: 600px;
+    object-fit: contain;
+    
+}
+.home .content{
+    flex: 1 1 40rem;
+}
+
+.home .content h3{
+    text-transform: uppercase;
+    font-size: 5rem;
+    margin-bottom: .5rem;
+}
+
+.home .content span{
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color:var(--yellow);
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+
+.home .content p{
+    font-size: 1.5rem;
+    line-height: 2;
+    padding: 1rem 0;
+    text-transform: uppercase;
+}
+
+.home .content a{
+    font-size: 1.5rem;
+}
+
+/* ----------  End Section Home ------------- */
+
+.header .logo{
+    text-transform: uppercase;
+    border-bottom: var(--border-bold);
+    font-weight: bolder;
+    font-size: 4.5rem;
+}
+
+.header .navbar{
+    width: 100%;
+}
+
+.header .navbar a {
+    display: block;
+    font-size: 2.5rem;
+    padding: 1.5rem;
+    padding-top: 1.5rem;
+    margin: 0.5 rem;
+}
+
+/* hover menu */
+.header .navbar a.active,
+.header .navbar a:hover{
+    background-color: var(--yellow);
+}
+
+/* Social Networks */
+.header .follow a{
+    font-size: 2.5rem;
+    margin: 0.1rem;
+    cursor: pointer;
+    transition: .6s linear;
+    
+}
+.header .follow a:hover{
+    transform:rotate(360deg);
+}
+
+#menu-btn{
+    position:absolute;
+    top: 0; right:-5.5rem;
+    height: 4.5rem;
+    width: 5rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    background-color: var(--black);
+    color: var(--white);
+}
+.fa-bars{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about .biography p{
+    margin: 1.5rem auto;
+    max-width: 70rem;
+    line-height: 1.5;
+    font-size: 1.5rem;
+}
+
+.about .biography .info{
+    margin: 1rem 0;
+}
+
+.about .biography .info h3{
+    padding: 1rem 1.5rem;
+    display: inline-block;
+    margin: 1rem;
+    background-color: var(--light-bg);
+    border: var(--border-light);
+    word-break:break-all;
+    font-size: 2rem;
+    font-weight: normal;
+    text-transform: none;
+}
+
+
+/* SKILLS */
+.about .skills{
+    margin: 3rem 0;
+}
+
+.about .skills .progress{
+    margin-top: 1rem;
+}
+
+.about .skills .progress .bar{
+    margin: 1rem auto;
+    max-width: 70rem;
+    border: var(--border-bold);
+    padding: 1rem;
+}
+.about .skills .progress .bar h3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2rem;
+    background-color: var(--yellow);
+    padding: 2rem; 
+}
+/* html */
+.about .skills .progress .bar:nth-child(1) h3{
+    width: 95%;
+}
+/* css */
+.about .skills .progress .bar:nth-child(2) h3{
+    width: 95%;
+}
+/* js */
+.about .skills .progress .bar:nth-child(3) h3{
+    width: 85%;
+}
+/* php */
+.about .skills .progress .bar:nth-child(4) h3{
+    width: 85%;
+}
+/* mysql */
+.about .skills .progress .bar:nth-child(5) h3{
+    width: 95%;
+}
+/* symfony */
+.about .skills .progress .bar:nth-child(6) h3{
+    width: 85%;
+}
+
+/* Formations & Expériences START */
+.about .edu-exp .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.about .edu-exp .row .box-container{
+    flex: 1 1 40rem;
+}
+.about .edu-exp .row .box-container .title{
+    padding: 1.5rem;
+    font-size: 2.5rem;
+    background-color: var(--yellow);
+}
+.about .edu-exp .row .box-container .box{
+    text-align: left;
+    margin: 1.5rem 0;
+    background-color: var(--light-bg);
+    padding: 2rem;
+}
+.about .edu-exp .row .box-container .box span{
+    font-size: 1.8rem;
+    font-style: italic;
+}
+.about .edu-exp .row .box-container .box h3{
+    font-size: 1.8rem;
+    padding-bottom: 0.5rem;
+}
+.about .edu-exp .row .box-container .box ul{
+    font-size: 1.5rem;
+    list-style-type: none;
+    padding-top: 1rem;
+}
+.about .edu-exp .row .box-container .box ul li{
+    padding: 0.8rem 0 0.8rem 0;
+}
+.about .edu-exp .row .box-container .box ul li:first-child{
+    padding-top: 1.5rem;
+}
+.about .edu-exp .row .box-container .box ul li:last-child{
+    padding-bottom: 1.5rem;
+}
+
+.about .edu-exp .row .box-container .box #more-btn{
+    display: inline-block;
+    cursor: pointer;
+    padding: 0.5rem 2rem;
+    margin-top: 1rem;
+    border: var(--border-light);
+    color: var(--black);
+    font-size: 1.5rem;
+    position: relative;
+    left: 92%;
+}
+.about .edu-exp .row .box-container .box #more-btn.active,
+.about .edu-exp .row .box-container .box #more-btn:hover{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* Formations & Expériences END */
+/* Services START */
+.services .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+.services .box-container .box{
+    padding: 2rem;
+    border: var(--border-light);
+}
+.services .box-container .box i{
+    font-size: 5rem;
+    margin-bottom: 0.5rem;
+    transition: 1s linear;
+}
+.services .box-container .box i:hover{
+    transform:rotate(360deg)
+}
+.services .box-container .box h3{
+    font-size: 2rem;
+    margin: 1rem 0;
+    background-color: var(--yellow);
+    padding: 1rem;
+}
+.services .box-container .box p{
+    font-size: 1.5rem;
+    text-transform: none;
+    line-height: 2.2rem;
+}
+/* Services END */
+
+
+
+/*   Media Queries // Responsivité  */
+@media(max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+
+    body.active{
+        padding-left: 0;
+    }
+}
+
+@media(max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+
+    .header.active{
+        padding-top: 7rem;
+    }
+
+    #menu-btn.fa-times{
+        right:0;
+    }
+    
+    .home .image img{
+        height: auto;
+        width: 100%;
+    }
+
+    .heading span{
+        text-transform: uppercase;
+        font-size: 4.5rem;
+        border-bottom: var(--border-bold);
+    }
+
+    /* SECTION ABOUT */
+    .about .biography .info{
+        margin-bottom: 1.5rem;
+    }
+    .about .biography .info h3{
+        font-size: 2rem;
+        display: block;
+    }
+    
+}
+
