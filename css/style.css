@@ -209,7 +209,8 @@ section{
     margin: 1.5rem auto;
     max-width: 70rem;
     line-height: 1.5;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    text-transform: none;
 }
 
 .about .biography .info{
@@ -381,14 +382,15 @@ section{
 .portfolio .box-container .box img{
     width: 100%;
     object-fit: contain;
-    
+}   
+
+.portfolio .box-container .box:nth-child(2n+1){
+    padding: 0.5rem;
+    border:solid 0.6rem var(--black);
 }
-/* super fier de cette config */
-.portfolio .box-container .box:hover:nth-child(2n+1){
-    border:solid 0.7rem var(--black);
-}
-.portfolio .box-container .box:hover:nth-child(2){
-    border:solid 0.7rem var(--yellow);
+.portfolio .box-container .box:nth-child(2){
+    padding: 0.5rem;
+    border:solid 0.6rem var(--yellow);
 }
 .portfolio .box-container h3{
     font-size: 2rem;
