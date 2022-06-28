@@ -1,5 +1,6 @@
 # portfolio
-Création de mon site web portfolio
+Création de mon site web portfolio.
+
 Langages utilisés : 
 * HTML
 * CSS
