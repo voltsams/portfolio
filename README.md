@@ -1,11 +1,5 @@
 # portfolio
-Portfolio répartie en 5 catégories :
-1- Home
-2- About
-3- Services
-4- Portfolio
-5- Contact
-
+Création de mon site web portfolio
 Langages utilisés : 
 * HTML
 * CSS
