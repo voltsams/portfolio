@@ -295,11 +295,20 @@
         <h1 class="heading">
             <span>Contact</span>
         </h1>
+
+        <form action="" method="post">
+            <div class="flex">
+                <input type="text" name="name" placeholder="nom"class="box" required>
+                <input type="text" name="email" placeholder="e-mail"class="box" required>
+            </div>
+            <input type="text" name="phone" placeholder="numéro de téléphone" class="box" required>
+            <textarea name="message" id="" class="box" cols="30" rows="10" placeholder="votre message"required></textarea>
+            <input type="submit" value="Envoyer" name="send" class="btn">
+        </form>
     </section>
     <!------------ CONTACT SECTION END ------------>
+    <div class="credit"> &copy; copyright <?php echo date('Y'); ?> - <span>Sami DRACH</span></div>
     
-    
-</section>
     <!-- custom js -->
     <script src="js/script.js"></script>
 </body>

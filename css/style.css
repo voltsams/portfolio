@@ -401,8 +401,51 @@ section{
     font-size: 1.8rem;
     font-style: italic
 }
-
 /* PORTFOLIO END */
+
+/* CONTACT START */
+
+.contact form{
+    max-width: 70rem;
+    margin: 0 auto;
+}
+.contact form .box{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 2rem;
+    border: var(--border-light);
+    text-transform: none;
+    margin: 1rem 0;
+}
+.contact form textarea{
+    height: 20rem;
+    resize: none;
+}
+.contact form .flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contact form .flex .box{
+    width: 49%;
+    justify-content: space-around;
+}
+/* CONTACT END */
+
+/* CREDIT START */
+.credit{
+    text-align: center;
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 1.8rem;
+    padding: 3rem;
+    width: 1200px;
+}
+.credit span{
+    color: var(--yellow);
+}
+/* CREDIT END */
+
 
 /*   Media Queries // Responsivité  */
 @media(max-width: 991px){
@@ -455,5 +498,9 @@ section{
     .portfolio .box-container .box{
         margin: 1rem 0 2rem;
     }
-}
 
+    /* CONTACT SECTION START */
+    .contact form .flex .box{
+        width: 100%;
+    }
+}
