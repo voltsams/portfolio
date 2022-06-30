@@ -1,3 +1,31 @@
+<?php
+// Création des variables de connexion
+$user = 'root';
+$pass ='';
+// Test de connexion à la BDD
+// try {
+//     
+//     foreach ($pdo->query('SELECT * FROM contact') as $row) {
+//         print_r($row);
+//     }
+// } catch (PDOException $exc) {
+//     print "Erreur :" . $exc->getMessage() . "<br/>";
+//     die;
+// }
+$pdo = new PDO('mysql:host=localhost;dbname=portfolio;port=3306', $user, $pass);
+
+if(isset($_POST['send'])){
+    $name = $_POST['name'];
+    $mail = $_POST['mail'];
+    $number = $_POST['number'];
+    $message = $_POST['message'];
+
+    $sql = "INSERT INTO `contact`(`name`,`mail`,`number`,`message`) VALUES (:name,:mail,:number,:message)";
+
+    $res = $pdo->prepare($sql);
+    $exec = $res->execute(array(":name"=>$name,":mail"=>$mail,":number"=>$number,":message"=>$message));
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -15,7 +43,6 @@
 <body>
     <!------------ HEADER NAVBAR START  ------------>
     <header class="header"> 
-
         <!-- Menu burger -->
         <div id="menu-btn" class="fas fa-bars"></div>
 
@@ -43,6 +70,7 @@
         <div class="image">
             <img src="images/portrait.jpg" alt="Portrait de Sami DRACH">
         </div>
+
 
         <div class="content">
             <h3>Moi, c'est Sami Drach</h3>
@@ -200,7 +228,8 @@
                 </div>
             </div>
             <!-- EXPERIENCE END -->
-            <!------------ ABOUT SECTION END ------------>
+        </section>
+        <!------------ ABOUT SECTION END ------------>
         
         
         <!------------ SERVICES SECTION START ------------>
@@ -299,15 +328,16 @@
         <form action="" method="post">
             <div class="flex">
                 <input type="text" name="name" placeholder="nom"class="box" required>
-                <input type="text" name="email" placeholder="e-mail"class="box" required>
+                <input type="text" name="mail" placeholder="e-mail"class="box" required>
             </div>
-            <input type="text" name="phone" placeholder="numéro de téléphone" class="box" required>
+            <input type="text" name="number" placeholder="numéro de téléphone" class="box" required>
             <textarea name="message" id="" class="box" cols="30" rows="10" placeholder="votre message"required></textarea>
             <input type="submit" value="Envoyer" name="send" class="btn">
         </form>
     </section>
-    <!------------ CONTACT SECTION END ------------>
-    <div class="credit"> &copy; copyright <?php echo date('Y'); ?> - <span>Sami DRACH</span></div>
+
+    <!-- FOOTER -->
+    <div class="footer"> &copy; copyright <?php echo date('Y'); ?> - <span>Sami DRACH</span></div>
     
     <!-- custom js -->
     <script src="js/script.js"></script>

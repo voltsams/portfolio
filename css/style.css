@@ -432,19 +432,18 @@ section{
 }
 /* CONTACT END */
 
-/* CREDIT START */
-.credit{
+/* FOOTER START */
+.footer{
     text-align: center;
     background-color: var(--black);
     color: var(--white);
     font-size: 1.8rem;
     padding: 3rem;
-    width: 1200px;
 }
-.credit span{
+.footer span{
     color: var(--yellow);
 }
-/* CREDIT END */
+/* FOOTER END */
 
 
 /*   Media Queries // Responsivité  */
