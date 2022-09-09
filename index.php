@@ -343,3 +343,5 @@ if(isset($_POST['send'])){
     <script src="js/script.js"></script>
 </body>
 </html>
+
+<!-- This is a test -->
